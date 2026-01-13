@@ -127,6 +127,8 @@ html {
 .hero {
     height: 100vh;
     background: url('background.jpg') center/cover no-repeat fixed;
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
@@ -245,6 +247,7 @@ html {
     border-radius: 15px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
 .storefront-image:hover {
@@ -622,6 +625,11 @@ html {
         left: 0;
     }
 
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
@@ -637,6 +645,10 @@ html {
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .storefront-image {
+        border-radius: 10px;
     }
 
     .section-header h2 {
